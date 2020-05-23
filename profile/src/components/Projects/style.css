@@ -1,0 +1,163 @@
+*,body,html{
+    padding: 0 ;
+    margin: 0 ;
+    box-sizing : border-box ;
+}
+body,html{
+    /* overflow-x: hidden; */
+}
+.container{
+    height: 100vh !important;
+    width: 100% !important;
+    /* background-color: rgb(245, 245, 153); */
+    display: flex;
+}
+.card{
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    transition: 0.7s cubic-bezier(0.69, 0.01, 0.25, 1);
+    background-color: rgb(245, 102, 102);
+    display: flex;
+    overflow-y: hidden;    
+}
+.content{
+    display: flex;
+    flex: 1;
+    background-color: white;
+    opacity: 0;
+    transition: 0.3s ease;
+    justify-content: center;
+}
+.content1{
+    background-color: black;
+}
+.profile1{
+    background: black !important;
+}
+.profile1 a{
+    color: orange;
+}
+.content2{
+    background-color: rgb(245, 102, 102);
+}
+.profile2{
+    background-color: rgb(245, 102, 102) !important;
+}
+.profile2 a{
+    color: rgb(78, 0, 141);
+}
+.content3{
+    background-color: violet;
+}
+.profile3{
+    background-color: violet !important;
+}
+.content4{
+    background-color: teal;
+}
+.profile4{
+    background-color: teal !important;
+}
+.profile4 a{
+    color: orange;
+}
+.content5{
+    background-color: rgb(125, 196, 125);
+    overflow: hidden;
+}
+.profile5{
+    background-color: rgb(125, 196, 125) !important;
+}
+.profile5 a{
+    color: rgb(236, 40, 105);
+}
+.profile{
+    transition: 0.6s cubic-bezier(0.79, 0.01, 0.25, 1);
+    transition-delay: 0.3s;
+    background-color:white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 250px;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(70px);
+    margin-top: 20px;
+}
+.profile a{
+    font-size: 50px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.card:hover{
+    flex-grow: 1.5;
+    /* transition-delay: 0.3s; */
+    /* background-color: red; */
+}
+.card:hover .content{
+    opacity: 1;
+}
+.card:hover .content .profile{
+    transform: translateY(-20px);
+    opacity: 1;
+}
+.card:hover .content .profile img{
+    width: 250px;
+}
+.profile img{
+    width: 150px;
+    border-radius: 50%;
+    align-self: center;
+    transition: 1s;
+    object-fit: cover;
+}
+.bgg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-position: top center;
+    transition: 0.3s ease;
+}
+.bg1, .bg2, .bg3, .bg4, .bg5{
+  text-align: center;
+  color: white;
+}
+.bg1 h1, .bg2 h1, .bg3 h1, .bg4 h1,.bg5 h1{
+   padding-top: 100%;
+}
+.bg1{
+    background: black;
+}
+.bg2{
+    background: rgb(245, 102, 102);
+}
+.bg3{
+    background-color: violet;
+}
+.bg4{
+    background-color: teal;
+}
+.bg5{
+    background-color: rgb(125, 196, 125);
+}
+@media (max-width: 600px) {
+    .container{
+        flex-direction: column;
+        height: 200vh !important;
+    }
+    .card:hover{
+        flex-grow: 5;
+    }
+    .card{
+        overflow-x: hidden;
+    }
+    .bgg h1{
+        padding-top: 10%;
+    }
+   
+}
